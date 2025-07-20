@@ -3,4 +3,4 @@
 ## [1.0.0] - Primera versión
 
 - Estructura base del plugin creada.
-- Módulos iniciales preparados.
+- Dashboard unificado listo.
