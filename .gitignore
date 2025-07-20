@@ -1,0 +1,10 @@
+*.zip
+*.tar.gz
+.DS_Store
+Thumbs.db
+node_modules/
+vendor/
+.idea/
+.vscode/
+wp-content/uploads/
+wp-content/cache/
