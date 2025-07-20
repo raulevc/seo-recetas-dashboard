@@ -1,10 +1,9 @@
 # SEO Recetas Dashboard
 
-Plugin modular para SEO, automatización de recetas y extracción de campos personalizados.
+Framework modular de SEO y automatización para recetas.
 
-## Funcionalidades:
-
-- SEO AI Sugerencias
-- Extractor de Recetas
-- Generador de Etiquetas
-- Interlinking Inteligente
+## Estructura:
+- admin/: Archivos del panel de administración
+- modules/: Módulos funcionales
+- plantillas-prompts/: Prompts seguros IA
+- documentacion/: Roadmap y notas
