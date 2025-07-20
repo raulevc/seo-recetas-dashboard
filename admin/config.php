@@ -1,0 +1,2 @@
+<?php
+// Configuración del plugin
