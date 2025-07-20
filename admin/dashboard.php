@@ -23,3 +23,25 @@ function seo_recetas_seo_ai() { echo '<h1>SEO AI Sugerencias</h1>'; }
 function seo_recetas_extractor() { echo '<h1>Extractor de Recetas</h1>'; }
 function seo_recetas_tags() { echo '<h1>Generador de Etiquetas</h1>'; }
 function seo_recetas_config() { echo '<h1>Configuración</h1>'; }
+
+function seo_recetas_config() {
+    if (isset($_POST['seo_recetas_debug'])) {
+        update_option('seo_recetas_debug', $_POST['seo_recetas_debug']);
+        echo '<div class="updated"><p>Debug actualizado.</p></div>';
+    }
+
+    $debug_activo = get_option('seo_recetas_debug', false);
+    ?>
+
+    <h1>Configuración</h1>
+    <form method="post">
+        <label>
+            <input type="checkbox" name="seo_recetas_debug" value="1" <?php checked($debug_activo, 1); ?> />
+            Activar debug exclusivo del plugin
+        </label>
+        <br><br>
+        <input type="submit" value="Guardar ajustes" class="button button-primary" />
+    </form>
+
+    <?php
+}
