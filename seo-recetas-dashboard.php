@@ -2,7 +2,7 @@
 /*
 Plugin Name: SEO Recetas Dashboard
 Description: Plugin unificado de SEO, interlinking, extractor y automatización para recetas.
-Version: 1.6.0
+Version: 1.6.1
 Author: Raúl E. Villanueva Caro
 GitHub Plugin URI: https://github.com/raulevc/seo-recetas-dashboard
 */
