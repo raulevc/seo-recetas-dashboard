@@ -8,3 +8,4 @@ vendor/
 .vscode/
 wp-content/uploads/
 wp-content/cache/
+modules/conexiones/credentials.json
