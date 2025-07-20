@@ -1,0 +1,2 @@
+<?php
+// Generador de etiquetas
