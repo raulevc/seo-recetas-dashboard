@@ -10,6 +10,7 @@ GitHub Plugin URI: https://github.com/raulevc/seo-recetas-dashboard
 defined('ABSPATH') or die('Sin acceso directo');
 
 // Cargar archivos principales
+// Cargar archivos principales
 require_once plugin_dir_path(__FILE__) . 'admin/dashboard.php';
 require_once plugin_dir_path(__FILE__) . 'admin/config.php';
 
