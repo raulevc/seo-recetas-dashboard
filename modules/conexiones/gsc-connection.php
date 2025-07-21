@@ -1,10 +1,11 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-// Cargar librería Google API Client (asegúrate de tenerla incluida)
-require_once plugin_dir_path(__FILE__) . '/vendor/autoload.php'; 
+require_once plugin_dir_path(__FILE__) . '/vendor/autoload.php';
 
-function seo_recetas_get_gsc_data($startDate, $endDate, $property) {
+function seo_recetas_get_gsc_data($startDate, $endDate) {
+    $property = SEO_RECETAS_GSC_PROPERTY;
+
     $client = new Google_Client();
     $client->setAuthConfig(plugin_dir_path(__FILE__) . '/credentials.json');
     $client->addScope('https://www.googleapis.com/auth/webmasters.readonly');
@@ -34,8 +35,7 @@ function seo_recetas_get_gsc_data($startDate, $endDate, $property) {
     return $resultados;
 }
 
-// Función de prueba para mostrar en admin (puede ir en un submenu temporal)
-
+// Submenú de prueba en el dashboard
 add_action('admin_menu', function() {
     add_submenu_page(
         'seo-recetas-dashboard',
@@ -50,11 +50,10 @@ add_action('admin_menu', function() {
 function seo_recetas_test_gsc_page() {
     echo '<div class="wrap"><h1>Prueba de conexión a Google Search Console</h1>';
 
-    $property = 'sc-domain:recetade.casa'; // Cambia por tu dominio
     $startDate = date('Y-m-d', strtotime('-7 days'));
     $endDate = date('Y-m-d');
 
-    $datos = seo_recetas_get_gsc_data($startDate, $endDate, $property);
+    $datos = seo_recetas_get_gsc_data($startDate, $endDate);
 
     if (!empty($datos)) {
         echo '<table class="widefat"><thead><tr><th>Query</th><th>Clics</th><th>Impresiones</th></tr></thead><tbody>';
@@ -63,7 +62,7 @@ function seo_recetas_test_gsc_page() {
         }
         echo '</tbody></table>';
     } else {
-        echo '<p>No se encontraron datos.</p>';
+        echo '<p>No se encontraron datos o la API no respondió.</p>';
     }
 
     echo '</div>';

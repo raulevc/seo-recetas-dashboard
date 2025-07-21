@@ -21,6 +21,7 @@ require_once plugin_dir_path(__FILE__) . 'modules/interlinking/interlinking.php'
 require_once plugin_dir_path(__FILE__) . 'modules/conexiones/auth-settings.php';
 require_once plugin_dir_path(__FILE__) . 'modules/conexiones/gemini-connection.php';
 require_once plugin_dir_path(__FILE__) . 'modules/conexiones/gsc-connection.php';
+require_once plugin_dir_path(__FILE__) . 'config-local.php';
 
 // Helpers
 require_once plugin_dir_path(__FILE__) . 'includes/helpers.php';
